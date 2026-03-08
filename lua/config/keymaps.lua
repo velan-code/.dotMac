@@ -7,22 +7,20 @@ local map = vim.keymap.set
 -- "jk" for Escape
 map({ "i", "v" }, "jk", "<Esc>")
 
--- Flutter Commands
-map("n", "<leader>fc", "<cmd>FlutterLogClear<cr>", { desc = "Clear Flutter Logs" })
-map("n", "<leader>fe", "<cmd>FlutterEmulators<cr>", { desc = "List Emulators" })
-map("n", "<leader>fg", "<cmd>FlutterGenerate<cr>", { desc = "Pub run build_runner" })
-map("n", "<leader>fo", "<cmd>FlutterOutlineOpen<cr>", { desc = "Open Flutter Outline" })
-map("n", "<leader>fq", "<cmd>FlutterQuit<cr>", { desc = "Quit Flutter Session" })
+-- Use <leader>F (Shift + F) for Flutter to avoid LazyVim's <leader>f (files)
+map("n", "<leader>Fs", "<cmd>FlutterRun<cr>", { desc = "Flutter: Start" })
+map("n", "<leader>Fr", "<cmd>FlutterReload<cr>", { desc = "Flutter: Hot Reload" })
+map("n", "<leader>FR", "<cmd>FlutterRestart<cr>", { desc = "Flutter: Hot Restart" })
+map("n", "<leader>Fq", "<cmd>FlutterQuit<cr>", { desc = "Flutter: Quit" })
+map("n", "<leader>Fv", "<cmd>FlutterDevices<cr>", { desc = "Flutter: Devices" })
+map("n", "<leader>Fe", "<cmd>FlutterEmulators<cr>", { desc = "Flutter: Emulators" })
+map("n", "<leader>Fo", "<cmd>FlutterOutlineToggle<cr>", { desc = "Flutter: Outline" })
+map("n", "<leader>Fl", "<cmd>FlutterLogClear<cr>", { desc = "Flutter: Clear Log" })
+map("n", "<leader>Fd", "<cmd>FlutterVisualDebug<cr>", { desc = "Flutter: Visual Debug" })
 
--- The "Big Two"
-map("n", "<leader>fr", "<cmd>FlutterReload<cr>", { desc = "Hot Reload" })
-map("n", "<leader>fR", "<cmd>FlutterRestart<cr>", { desc = "Hot Restart" })
-
--- Run/Select Device
-map("n", "<leader>fs", "<cmd>FlutterRun<cr>", { desc = "Start Flutter" })
-map("n", "<leader>fv", "<cmd>FlutterDevices<cr>", { desc = "Select Device/View" })
-
--- Toggle Visual Debugging
-map("n", "<leader>fd", "<cmd>FlutterVisualDebug<cr>", { desc = "Toggle Visual Debug" })
-map("n", "<leader>fh", "<cmd>FlutterRebind<cr>", { desc = "Rebind DevTools" })
-map("n", "<leader>fp", "<cmd>FlutterLspRestart<cr>", { desc = "Restart Flutter LSP" })
+local ok, wk = pcall(require, "which-key")
+if ok then
+    wk.add({
+        { "<leader>F", group = "flutter" },
+    })
+end
