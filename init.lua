@@ -1,7 +1,5 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-require("plugins.color")
-require("plugins.tmux")
 require("flutter-tools").setup({})
 
 -- make nvim transparent
