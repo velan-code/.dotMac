@@ -21,4 +21,9 @@ elif [[ "$extension" == "cpp" ]]; then
   chmod +x ".output/$filename"
   ./.output/$filename
 
+elif [[ "$extension" == "f90" ]]; then
+  gfortran $source -o ".output/$filename"
+  chmod +x "./output/$filename"
+  ./.output/$filename
+
 fi
