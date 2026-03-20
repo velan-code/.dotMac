@@ -14,14 +14,6 @@ return {
         lsp = { color = { enabled = true } },
         hot_reload_on_save = true,
       },
-      require("lspconfig").dartls.setup({
-        settings = {
-          dart = {
-            completeFunctionCalls = false, -- Disables auto-insertion of () and params
-            showTodos = true,
-          },
-        },
-      })
     )
   end,
 }
