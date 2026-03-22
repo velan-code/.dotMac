@@ -1,2 +1,0 @@
-[tool.pylsp.plugins.jedi]
-extra_paths = ["/Users/velan/Library/Python/3.9/lib/python/site-packages"]

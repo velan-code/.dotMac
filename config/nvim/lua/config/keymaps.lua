@@ -20,7 +20,9 @@ map("n", "<leader>Fd", "<cmd>FlutterVisualDebug<cr>", { desc = "Flutter: Visual 
 
 local ok, wk = pcall(require, "which-key")
 if ok then
-    wk.add({
-        { "<leader>F", group = "flutter" },
-    })
+  wk.add({
+    { "<leader>F", group = "flutter" },
+  })
 end
+
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show LSP hover information" })
