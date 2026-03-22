@@ -5,7 +5,10 @@
 local map = vim.keymap.set
 
 -- "jk" for Escape
-map({ "i", "v" }, "jk", "<Esc>")
+map({ "i", "v" }, "jk", "<Esc>", { noremap = true, silent = true })
+map({ "i", "v" }, "<C-]>", "<Esc>", { noremap = true, silent = true })
+
+vim.opt.timeoutlen = 250
 
 -- Use <leader>F (Shift + F) for Flutter to avoid LazyVim's <leader>f (files)
 map("n", "<leader>Fs", "<cmd>FlutterRun<cr>", { desc = "Flutter: Start" })
