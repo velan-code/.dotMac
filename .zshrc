@@ -119,6 +119,8 @@ alias vim="nvim"
 alias safari="open -a safari"
 alias gemini="safari https://gemini.google.com"
 
+alias resize='print "\e[8;30;100t"'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
