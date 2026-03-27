@@ -117,7 +117,7 @@ alias cat="bat"
 alias vim="nvim"
 
 alias safari="open -a safari"
-alias gemini="safari https://gemini.google.com"
+alias gemini="safari https://chatgpt.com"
 
 alias resize='print "\e[8;30;100t"'
 
