@@ -5,7 +5,7 @@
 local map = vim.keymap.set
 
 -- "jk" for Escape
-map({ "i", "v" }, "jk", "<Esc>", { noremap = true, silent = true })
+-- map({ "i", "v" }, "jk", "<Esc>", { noremap = true, silent = true })
 map({ "i", "v" }, "<C-]>", "<Esc>", { noremap = true, silent = true })
 
 vim.opt.timeoutlen = 250
