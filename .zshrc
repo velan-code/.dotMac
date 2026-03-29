@@ -119,9 +119,7 @@ resize() {
 }
 
 sat() {
-  osascript -e 'tell application "iTerm2" to 
-  tell current window to 
-  set bounds to {0, 0, 1200, 800}'
+  osascript -e 'tell application "iTerm2" to tell current window to set bounds to {25, 25, 1100, 900}'
 }
 
 
