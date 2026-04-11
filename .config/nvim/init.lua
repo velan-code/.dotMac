@@ -1,11 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
--- make nvim transparent
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.api.nvim_set_hl(0, "TabLine", { bg = "none" })
-
 --  The main background of the tab line
 vim.api.nvim_set_hl(0, "TabLine", { bg = "none", fg = "white" })
 vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none" })
