@@ -79,7 +79,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search catimg zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,6 +113,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Function to COntrol temrinal 
+
+# zsh-vim-mode Config 
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk               #  jk for Esc 
+ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT           # Always starting with insert mode for each command line
 
 resize() {
   printf "\e[8;30;100t"
