@@ -118,6 +118,11 @@ source $ZSH/oh-my-zsh.sh
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk               #  jk for Esc 
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true             #  enable system clipbroad
 
+
+
+
+
+
 resize() {
   printf "\e[8;30;100t"
 }
