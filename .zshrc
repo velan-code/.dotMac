@@ -79,7 +79,17 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search catimg zsh-vi-mode)
+plugins=(
+  git 
+  zsh-autosuggestions 
+  zsh-syntax-highlighting 
+  zsh-autopair
+  zsh-vi-mode
+  web-search 
+  catimg 
+  colored-man-pages
+  command-not-found
+  )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,10 +128,10 @@ source $ZSH/oh-my-zsh.sh
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk               #  jk for Esc 
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true             #  enable system clipbroad
 
-
-
-
-
+mkcd()
+{
+  mkdir -p "$1" && cd "$1"
+}
 
 resize() {
   printf "\e[8;30;100t"
@@ -135,7 +145,6 @@ sat() {
 alias tree="eza --tree --icons"
 alias ls="eza --icons -1"
 alias la="eza --icons -A"
-alias cat="bat"
 alias vim="nvim"
 
 alias safari="open -a safari"
@@ -148,6 +157,8 @@ alias gemini="safari https://gemini.google.com"
 source <(fzf --zsh)
 # zoxide shell-integration
 eval "$(zoxide init zsh)"
+# fzf and bat integrations 
+export FZF_DEFAULT_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 export PATH="$PATH:$HOME/.local/bin" 
 export ANDROID_HOME="$HOME/Library/Android/sdk"
