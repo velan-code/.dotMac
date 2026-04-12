@@ -116,7 +116,7 @@ source $ZSH/oh-my-zsh.sh
 
 # zsh-vim-mode Config 
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk               #  jk for Esc 
-ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT           # Always starting with insert mode for each command line
+ZVM_SYSTEM_CLIPBOARD_ENABLED=true             #  enable system clipbroad
 
 resize() {
   printf "\e[8;30;100t"
