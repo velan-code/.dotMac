@@ -150,6 +150,9 @@ alias vim="nvim"
 alias safari="open -a safari"
 alias gemini="safari https://gemini.google.com"
 
+alias cls="clear" 
+alias pip="pip3"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
