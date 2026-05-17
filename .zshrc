@@ -153,6 +153,10 @@ alias gemini="safari https://gemini.google.com"
 alias cls="clear" 
 alias pip="pip3"
 
+alias ff="fastfetch"
+
+alias openvpn="/opt/homebrew/opt/openvpn/sbin/openvpn"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -168,3 +172,4 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/emulator"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+
