@@ -126,7 +126,7 @@ source $ZSH/oh-my-zsh.sh
 
 # zsh-vim-mode Config 
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk               #  jk for Esc 
-ZVM_SYSTEM_CLIPBOARD_ENABLED=true             #  enable system clipbroad
+#ZVM_SYSTEM_CLIPBOARD_ENABLED=true             #  enable system clipbroad
 
 mkcd()
 {
